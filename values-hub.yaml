@@ -8,6 +8,7 @@ clusterGroup:
     - golang-external-secrets
     - config-demo
     - hello-world
+    - kustomize-http-example
 
   subscriptions:
     acm:
@@ -20,6 +21,7 @@ clusterGroup:
     - hub
     - config-demo
     - hello-world
+    - kustomize-http-example
 
   applications:
     acm:
@@ -57,6 +59,13 @@ clusterGroup:
       project: hello-world
       path: charts/all/hello-world
 
+    kustomize-demo:
+      name: kustomize-http-example
+      namespace: kustomize-http-example
+      kustomize: true
+      project: kustomize-http-example
+      path: charts/all/kustomize-http-example
+      
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
