@@ -68,7 +68,7 @@ clusterGroup:
       project: kustomize-http-example
       path: charts/all/kustomize-http-example
 
-     helm-demo:
+    helm-demo:
       name: helm-http-example
       namespace: helm-http-example
       project: helm-http-example
